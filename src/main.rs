@@ -8,6 +8,7 @@ mod create_phone_number;
 mod digital_root;
 mod duplicate_encoder;
 mod who_likes_it;
+mod build_tower;
 
 
 fn main() {
@@ -82,14 +83,22 @@ fn main() {
 
     //WHO LIKES IT
     let wli_1: String = who_likes_it::likes(&[]);
-    println!("{}", wli_1);
+    println!("{}\n", wli_1);
     let wli_2: String = who_likes_it::likes(&["Peter"]);
-    println!("{}", wli_2);
+    println!("{}\n", wli_2);
     let wli_3: String = who_likes_it::likes(&["Jacob", "Alex"]);
-    println!("{}", wli_3);
+    println!("{}\n", wli_3);
     let wli_4: String = who_likes_it::likes(&["Max", "John", "Mark"]);
-    println!("{}", wli_4);
+    println!("{}\n", wli_4);
     let wli_5: String = who_likes_it::likes(&["Alex", "Jacob", "Mark", "Max"]);
-    println!("{}", wli_5);
+    println!("{}\n\n", wli_5);
+
+    //BUILD TOWER
+    build_tower::tower_builder(1);
+    print!("\n");
+    build_tower::tower_builder(2);
+    print!("\n");
+    build_tower::tower_builder(3);
+    print!("\n\n");
 
 }
